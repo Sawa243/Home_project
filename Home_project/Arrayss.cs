@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace Home_project
 {
@@ -141,33 +140,31 @@ namespace Home_project
             }
             return array;
         }
-       public static void Swap(ref int e1, ref int e2)
-        {
-            var temp = e1;
-            e1 = e2;
-            e2 = temp;
-        }
         public static void DZ_4_10()
         {
-            int[] array = new int[7];
+            int[] array = new int[8];
+            int temp;
             Random random = new Random();
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = random.Next(0, 10);
                 Console.Write(array[i] + " ");
             }
-            for (int i = 1; i < array.Length; i++)
+            Console.WriteLine();
+            for (int i = 0; i < array.Length; i++)
             {
-                int tmp = array[i];
-                int j = i;
-                while ((j > 1) && (array[j - 1] > tmp))
+                for (int j = i + 1; j < array.Length; j++)
                 {
-                    Swap(ref array[j - 1], ref array[j]);
-                    j--;
+                    if (array[i] < array[j])
+                    {
+                        temp = array[i];
+                        array[i] = array[j];
+                        array[j] = temp;
+                    }
                 }
-                array[j] = tmp;
                 Console.Write(array[i] + " ");
             }
+
         }
 
     }

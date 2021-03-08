@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace Home_project
 {
@@ -8,7 +7,7 @@ namespace Home_project
     {
         static void Main(string[] args)
         {
-           
+
         }
         public static int DZ_1_1()
         {

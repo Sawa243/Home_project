@@ -142,19 +142,24 @@ namespace Home_project
             }
             Console.WriteLine(a + b);
         }
-        public static void DZ_3_8()
+        public static void DZ_3_8()         // так и не решил
         {
-            int a = Convert.ToInt32(Console.ReadLine());
-            int Midlle = a / 2;
-            int Otvet = 0;
-            for (int i = 0; i<a ;i++)
+            double a = Convert.ToInt32(Console.ReadLine());
+            double Midlle = a / 2;
+            double Otvet = 0;
+            for (int i = 0; i < a; i++)
             {
-                if ((Midlle*Midlle*Midlle)>a)
-                {
-                    Midlle = Midlle / 2;
-                }
 
+                while (Math.Pow(Midlle, 3) > a && Math.Round(Midlle / 2, 2) != 0)
+                {
+                    Midlle = Math.Round(Midlle / 2, 2);
+                }
+                for (double j = Midlle; j < Math.Pow(a, 1.0 / 3.0); j++)
+                {
+                    Otvet = Math.Round(j, 2);
+                }
             }
-        }
+            Console.WriteLine(Otvet);
+        }  
     }
 }
