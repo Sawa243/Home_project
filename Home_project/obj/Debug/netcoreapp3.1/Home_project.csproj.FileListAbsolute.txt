@@ -1,0 +1,13 @@
+C:\Users\ПК\Desktop\C#\Home_project\Home_project\bin\Debug\netcoreapp3.1\Home_project.exe
+C:\Users\ПК\Desktop\C#\Home_project\Home_project\bin\Debug\netcoreapp3.1\Home_project.deps.json
+C:\Users\ПК\Desktop\C#\Home_project\Home_project\bin\Debug\netcoreapp3.1\Home_project.runtimeconfig.json
+C:\Users\ПК\Desktop\C#\Home_project\Home_project\bin\Debug\netcoreapp3.1\Home_project.runtimeconfig.dev.json
+C:\Users\ПК\Desktop\C#\Home_project\Home_project\bin\Debug\netcoreapp3.1\Home_project.dll
+C:\Users\ПК\Desktop\C#\Home_project\Home_project\bin\Debug\netcoreapp3.1\Home_project.pdb
+C:\Users\ПК\Desktop\C#\Home_project\Home_project\obj\Debug\netcoreapp3.1\Home_project.csprojAssemblyReference.cache
+C:\Users\ПК\Desktop\C#\Home_project\Home_project\obj\Debug\netcoreapp3.1\Home_project.AssemblyInfoInputs.cache
+C:\Users\ПК\Desktop\C#\Home_project\Home_project\obj\Debug\netcoreapp3.1\Home_project.AssemblyInfo.cs
+C:\Users\ПК\Desktop\C#\Home_project\Home_project\obj\Debug\netcoreapp3.1\Home_project.csproj.CoreCompileInputs.cache
+C:\Users\ПК\Desktop\C#\Home_project\Home_project\obj\Debug\netcoreapp3.1\Home_project.dll
+C:\Users\ПК\Desktop\C#\Home_project\Home_project\obj\Debug\netcoreapp3.1\Home_project.pdb
+C:\Users\ПК\Desktop\C#\Home_project\Home_project\obj\Debug\netcoreapp3.1\Home_project.genruntimeconfig.cache
