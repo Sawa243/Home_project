@@ -66,7 +66,109 @@ namespace Home_project
         }
         public static void DZ_4_6()
         {
-
+            int[] array = new int[5];
+            Random random = new Random();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = random.Next(0, 10);
+                Console.Write(array[i] + " ");
+            }
+            Console.WriteLine();
+            for (int i = array.Length - 1; i >= 0; i--)
+            {
+                Console.Write(array[i] + " ");
+            }
+        
         }
+        public static void DZ_4_7()
+        {
+            int[] array = new int[10];
+            Random random = new Random();
+            int summa = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = random.Next(0, 10);
+                if (array[i] % 2 > 0)
+                    summa = summa + 1;
+                Console.Write(array[i] + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine(summa);
+        }
+        public static void DZ_4_8()
+        {
+            int[] array = new int[8];
+            Random random = new Random();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = random.Next(0, 10);
+                Console.Write(array[i] + " ");
+            }
+            Console.WriteLine();
+            for (int i = array.Length / 2; i < array.Length; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+            for (int i = 0; i < array.Length / 2; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+        }
+       public static int[] DZ_4_9()
+        {
+            int[] array = new int[6];
+            Random random = new Random();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = random.Next(0, 10);
+                Console.Write(array[i] + " ");
+            }
+            Console.WriteLine();
+            for (int i = 0; i < array.Length; i++)
+            {
+                int min = i;
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (array[j] < array[min])
+                    {
+                        min = j;
+                    }
+                }
+                int temp = array[min];
+                array[min] = array[i];
+                array[i] = temp;
+                Console.Write(array[i] + " ");
+            }
+            return array;
+        }
+       public static void Swap(ref int e1, ref int e2)
+        {
+            var temp = e1;
+            e1 = e2;
+            e2 = temp;
+        }
+        public static void DZ_4_10()
+        {
+            int[] array = new int[7];
+            Random random = new Random();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = random.Next(0, 10);
+                Console.Write(array[i] + " ");
+            }
+            for (int i = 1; i < array.Length; i++)
+            {
+                int tmp = array[i];
+                int j = i;
+                while ((j > 1) && (array[j - 1] > tmp))
+                {
+                    Swap(ref array[j - 1], ref array[j]);
+                    j--;
+                }
+                array[j] = tmp;
+                Console.Write(array[i] + " ");
+            }
+        }
+
     }
 }

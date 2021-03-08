@@ -8,7 +8,7 @@ namespace Home_project
     {
         static void Main(string[] args)
         {
-
+           
         }
         public static int DZ_1_1()
         {
