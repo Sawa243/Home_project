@@ -45,11 +45,11 @@ namespace Home_project
             Console.WriteLine("минимальное число: " + min);
             Console.WriteLine("Индекс минимального числа: " + minI + "," + minJ);
         }
-        public static void DZ_5_5()
+        public static int DZ_5_5()
         {
             double[,] array = new double[3, 3];
             Random random = new Random();
-            double coin = 0;
+            int coin = 0;
             for (int i = 0; i < array.GetLength(0); i++)
             {
                 for (int j = 0; j < array.GetLength(1); j++)
@@ -63,78 +63,16 @@ namespace Home_project
             {
                 for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    if (array[i, j] == array[0, 0])
+                    if((i<=0 || array[i,j]>array[i-1,j])&&
+                        (i>= array.GetLength(0)-1|| array[i,j]>array[i+1,j]) &&
+                        (j <= 0 || array[i, j] > array[i, j-1]) &&
+                        (j >= array.GetLength(1) - 1 || array[i, j] > array[i, j+1]))
                     {
-                        if (array[0, 0] > array[0, 1] && array[0, 0] > array[1, 1] && array[0, 0] > array[1, 0])
-                        {
-                            coin++;
-                        }
-                    }
-                    if (array[i, j] == array[0, 1])
-                    {
-                        if (array[0, 1] > array[0, 0] && array[0, 1] > array[0, 2] && array[0, 1] > array[1, 0]
-                            && array[0, 1] > array[1, 1] && array[0, 1] > array[1, 2])
-                        {
-                            coin++;
-                        }
-                    }
-                    if (array[i, j] == array[0, 2])
-                    {
-                        if (array[0, 2] > array[0, 1] && array[0, 2] > array[1, 1] && array[0, 2] > array[1, 2])
-                        {
-                            coin++;
-                        }
-                    }
-                    if (array[i, j] == array[1, 0])
-                    {
-                        if (array[1, 0] > array[0, 0] && array[1, 0] > array[0, 1] && array[1, 0] > array[1, 1]
-                            && array[1, 0] > array[2, 1] && array[1, 0] > array[2, 0])
-                        {
-                            coin++;
-                        }
-                    }
-                    if (array[i, j] == array[1, 1])
-                    {
-                        if (array[1, 1] > array[0, 0] && array[1, 1] > array[0, 1] && array[1, 1] > array[0, 2] &&
-                            array[1, 1] > array[1, 0] && array[1, 1] > array[1, 2] && array[1, 1] > array[2, 0] &&
-                            array[1, 1] > array[2, 1] && array[1, 1] > array[2, 2])
-                        {
-                            coin++;
-                        }
-                    }
-                    if (array[i, j] == array[1, 2])
-                    {
-                        if (array[1, 2] > array[0, 2] && array[1, 2] > array[1, 1] && array[1, 2] > array[0, 1]
-                            && array[1, 2] > array[2, 1] && array[1, 2] > array[2, 2])
-                        {
-                            coin++;
-                        }
-                    }
-                    if (array[i, j] == array[2, 0])
-                    {
-                        if (array[2, 0] > array[1, 0] && array[2, 0] > array[1, 1] && array[2, 0] > array[2, 1])
-                        {
-                            coin++;
-                        }
-                    }
-                    if (array[i, j] == array[2, 1])
-                    {
-                        if (array[2, 1] > array[2, 0] && array[2, 1] > array[1, 0] && array[2, 1] > array[1, 1]
-                            && array[2, 1] > array[1, 2] && array[2, 1] > array[2, 2])
-                        {
-                            coin++;
-                        }
-                    }
-                    if (array[i, j] == array[2, 2])
-                    {
-                        if (array[2, 2] > array[2, 1] && array[2, 2] > array[1, 1] && array[2, 2] > array[1, 2])
-                        {
-                            coin++;
-                        }
+                        coin++;
                     }
                 }
             }
-            Console.WriteLine(coin);
+            return coin;
         }
         public static void DZ_5_6()
         {

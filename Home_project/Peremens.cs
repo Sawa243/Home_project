@@ -7,7 +7,23 @@ namespace Home_project
     {
         static void Main(string[] args)
         {
-
+            int a = Convert.ToInt32(Console.ReadLine());
+            int Left = 0;
+            int Raight = a;
+            int Midlle = (Left + Raight) / 2;
+            while (Midlle * Midlle * Midlle != a)
+            {
+                if (Midlle * Midlle * Midlle > a)
+                {
+                    Raight = Midlle;
+                }
+                else
+                {
+                    Left = Midlle;
+                }
+                Midlle = (Left + Raight) / 2;
+            }
+            Console.WriteLine(Midlle);
         }
         public static int DZ_1_1()
         {
