@@ -6,7 +6,7 @@ namespace Home_project
    public  class Peremens
     {
        static void Main(string[] args)
-        {   
+        {
         }
         public static int DZ_1_1(int a, int b)
         {

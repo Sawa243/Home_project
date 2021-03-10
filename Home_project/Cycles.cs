@@ -4,34 +4,38 @@ using System.Text;
 
 namespace Home_project
 {
-    class Cycles
+   public class Cycles
     {
-        public static void DZ_3_1()
+        public static int DZ_3_1(int a,int b)
         {
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
+            //int a = Convert.ToInt32(Console.ReadLine());
+            //int b = Convert.ToInt32(Console.ReadLine());
             int AvB = 1;
             for (int i = 0;i<b;i++)
             {
                 AvB = AvB * a;
             }
-            Console.WriteLine(AvB);
+            return AvB;
         }
-        public static void DZ_3_2()
+        public static string DZ_3_2(int chislo)
         {
-            int chislo;
-            chislo = Convert.ToInt32(Console.ReadLine());
+            string a="";
+            //int chislo;
+            //chislo = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < 1000; i++)
             {
                 if (i % chislo == 0)
                 {
                     Console.WriteLine(i);
+                    a = a + " "+i;
                 }
+                
             }
+            return a;
         }
-        public static int DZ_3_3()
+        public static int DZ_3_3(int a)
         {
-            int a = Convert.ToInt32(Console.ReadLine());
+            //int a = Convert.ToInt32(Console.ReadLine());
             int summa = 0;
             for (int i = 0; i < a; i++)
             {
@@ -40,11 +44,11 @@ namespace Home_project
             }
             return summa;
         }
-        public static void DZ_3_4()
+        public static int DZ_3_4(int a)
         {
-            int a = Convert.ToInt32(Console.ReadLine());
+            //int a = Convert.ToInt32(Console.ReadLine());
             int c = a;
-            while (c != 0)
+            for (int i = a; 1 < i; i--)
             {
                 if (a > 1)
                 {
@@ -56,22 +60,19 @@ namespace Home_project
                 }
                 if (a % c == 0)
                 {
-                    throw new Exception("Деление на 0");
+                    if (a == c)
+                    {
+                        new Exception("Нет решений");
+                    }
+                    return c; 
                 }
             }
-            if (c > 1 || c < -1)
-            {
-                Console.WriteLine(c);
-            }
-            else
-            {
-                Console.WriteLine("Нет решений");
-            }
+            return 0;
         }
-        public static int DZ_3_5()
+        public static int DZ_3_5(int a, int b)
         {
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
+            //int a = Convert.ToInt32(Console.ReadLine());
+            //int b = Convert.ToInt32(Console.ReadLine());
             int tmp = 0;
             int count = 0;
             if (a > b)
