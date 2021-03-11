@@ -90,14 +90,15 @@ namespace Home_project
             }
             return count;
         }
-        public static void DZ_3_6()
+        public static string DZ_3_6(int n, int n1,int n2)
         {
-            Console.WriteLine("Введите число n число: ");
-            int n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите первое число ряда Фибоначи: ");
-            int n1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите второе число ряда Фибоначи: ");
-            int n2 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Введите число n число: ");
+            //int n = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Введите первое число ряда Фибоначи: ");
+            //int n1 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Введите второе число ряда Фибоначи: ");
+            //int n2 = Convert.ToInt32(Console.ReadLine());
+            string answer = "";
             if (n == 1)
             {
                 Console.WriteLine(n1);
@@ -108,7 +109,7 @@ namespace Home_project
             }
             else if (n <= 0)
             {
-                Console.WriteLine("Число отсутствует");
+                new Exception("Число отсутствует");
             }
             int summa = 0;
             for (int i = 2; i < n; i++)
@@ -117,13 +118,15 @@ namespace Home_project
                 n1 = n2;
                 n2 = summa;
             }
-            Console.WriteLine($"N - ое число ряда: {summa}");
+            answer = ($"N - ое число ряда: {summa}");
+            return answer;
         }
-        public static void DZ_3_7()
+        public static int DZ_3_7(int a, int b)
         {
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
+            //int a = Convert.ToInt32(Console.ReadLine());
+            //int b = Convert.ToInt32(Console.ReadLine());
             int tmp = 1;
+            int c;
             if (b > a)
             {
                 tmp = a;
@@ -141,12 +144,14 @@ namespace Home_project
                     b = b % a;
                 }
             }
-            Console.WriteLine(a + b);
+            c = a + b;
+            //Console.WriteLine(a + b);
+            return c;
         }
-        public static void DZ_3_8()
+        public static int DZ_3_8(int a)
         {
             //Math.Round(Midlle / 2, 2) можно использовать для точности
-            int a = Convert.ToInt32(Console.ReadLine());
+            //int a = Convert.ToInt32(Console.ReadLine());
             int Left = 0;
             int Raight = a;
             int Midlle = (Left+Raight) / 2;
@@ -162,7 +167,8 @@ namespace Home_project
                 }
                 Midlle = (Left + Raight) / 2;
             }
-            Console.WriteLine(Midlle);
+            //Console.WriteLine(Midlle);
+            return Midlle;
         }  
     }
 }

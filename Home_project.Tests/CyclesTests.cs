@@ -48,6 +48,33 @@ namespace Home_project.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(5, 25, 54, "N - ое число ряда: 212")]
+        [TestCase(2, 7, 5, "N - ое число ряда: 0")]
+        [TestCase(84, 42, 315, "N - ое число ряда: 1385850265")]
+        public void DZ_3_6_Tests(int n, int n1, int n2, string expected)
+        {
+            string actual = Cycles.DZ_3_6(n,n1,n2);
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestCase(5, 25, 5)]
+        [TestCase(2, 7, 1)]
+        [TestCase(84, 42, 42)]
+        public void DZ_3_7_Tests(int a, int b,  int expected)
+        {
+            int actual = Cycles.DZ_3_7(a,b);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(27, 3)]
+        [TestCase(125, 5)]
+        [TestCase(729, 9)]
+        public void DZ_3_8_Tests(int a, int expected)
+        {
+            int actual = Cycles.DZ_3_8(a);
+            Assert.AreEqual(expected, actual, 0.1d);
+        }
 
     }
 }
