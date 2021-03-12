@@ -134,6 +134,10 @@ namespace Home_project
             //    Console.Write(array[i] + " ");
             //}
             //Console.WriteLine();
+            if (array== new int[0])
+            {
+                throw new  ArgumentException();
+            }
             for (int i = 0; i < array.Length; i++)
             {
                 int min = i;

@@ -14,6 +14,22 @@ namespace Home_project.Tests
         }
 
 
+        [TestCase(0,0)]
+        public void DZ_2_1_TestsNegativ(int a, int b)
+        {
+            try
+            {
+                Branch_structures.DZ_2_1(a,b);
+                Assert.Fail();
+            }
+            catch
+            {
+                Assert.Pass();
+            }
+
+        }
+
+
         [TestCase(1,1, "Принадлежит к 1 четверти")]
         [TestCase(-1,2, "Принадлежит к 2 четверти")]
         [TestCase(-5,-6, "Принадлежит к 3 четверти")]

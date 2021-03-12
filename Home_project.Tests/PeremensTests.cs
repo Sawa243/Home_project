@@ -13,6 +13,20 @@ namespace Home_project.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(5, 0)]
+        public void DZ_1_1_TestsNegativ(int a, int b)
+        {
+            try
+            {
+                Peremens.DZ_1_1(a, b);
+                Assert.Fail();
+            }
+            catch
+            {
+                Assert.Pass();
+            }
+        }
+
         [TestCase(5, 13, new int[2] { 13, 5 })]
         [TestCase(8, 2, new int[2] { 2, 8 })]
         [TestCase(2, 10, new int[2] { 10, 2 })]

@@ -17,7 +17,7 @@ namespace Home_project
             //Console.WriteLine("Введите число 2 и нажмите ввод");
             //b = Convert.ToInt32(Console.ReadLine());
             //b = 3;
-            if (a == 0 && b == 0 || a == b)
+            if (a == 0 || b == 0 || a == b)
             {
                 throw new Exception("Деление на 0");
             }

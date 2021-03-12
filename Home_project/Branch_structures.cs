@@ -25,6 +25,10 @@ namespace Home_project
             {
                 return (a * b);
             }
+            if (a==0 || b == 0)
+            {
+                throw new ArgumentException();
+            }
             return 0;
         }
         public static string DZ_2_2(int x, int y)

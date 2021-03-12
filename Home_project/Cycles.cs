@@ -11,6 +11,10 @@ namespace Home_project
             //int a = Convert.ToInt32(Console.ReadLine());
             //int b = Convert.ToInt32(Console.ReadLine());
             int AvB = 1;
+            if (b == 0)
+            {
+                throw new ArgumentException();
+            }
             for (int i = 0;i<b;i++)
             {
                 AvB = AvB * a;

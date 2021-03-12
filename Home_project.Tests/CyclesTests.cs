@@ -13,6 +13,21 @@ namespace Home_project.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(5, 0)]
+        public void DZ_3_1_TestsNegativ(int a, int b)
+        {
+            try
+            {
+                Cycles.DZ_3_1(a, b);
+                Assert.Fail();
+            }
+            catch
+            {
+                Assert.Pass();
+            }
+
+        }
+
         [TestCase(300, " 0 300 600 900")]
         [TestCase(400, " 0 400 800")]
         [TestCase(250, " 0 250 500 750")]

@@ -95,6 +95,10 @@ namespace Home_project
             //}
             //Console.WriteLine();
             //Console.WriteLine();
+            if (strok == 0 || stolbec == 0)
+            {
+                throw new ArgumentException();
+            }
             string answer = "";
             double[,] arrayOtr = new double[stolbec, strok];
             for (int i = 0; i < arrayOtr.GetLength(0); i++)

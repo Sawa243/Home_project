@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 
+
 namespace Home_project.Tests
 {
     class Two_Dimensional_arraysTests
@@ -34,7 +35,29 @@ namespace Home_project.Tests
             string actual = Two_Dimensional_arrays.DZ_5_6(array,strok,stolbec);
             Assert.AreEqual(expected, actual);
         }
+
+
+
+        [TestCase(1, 2, 0)]
+        [TestCase(2, 0, 2)]
+        public void DZ_5_6NegativTests(int MockNumber, int strok, int stolbec)
+        {
+            double[,] array = MockForTests.GetMock(MockNumber);
+            try
+            {
+                Two_Dimensional_arrays.DZ_5_6(array, strok, stolbec);
+                Assert.Fail();
+            }
+            catch
+            {
+                Assert.Pass();
+            }
+        }
+
+
     }
+
+
 
     public static class MockForTests
     {

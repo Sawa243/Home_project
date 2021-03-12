@@ -61,6 +61,25 @@ namespace Home_project.Tests
             Assert.AreEqual(expected, actual);
         }
 
+
+
+        [TestCase(new int[] {0})]
+        public void DZ_4_9TestsNegativ(int[] array)
+        {
+            try
+            {
+                Arrayss.DZ_4_9(array);
+                Assert.Fail();
+            }
+            catch
+            {
+                Assert.Pass();
+            }
+            
+        }
+
+
+
         [TestCase(new int[] { 8, 14, 5, 7, 22 }, "22 14 8 7 5 ")]
         [TestCase(new int[] { 12, 36, 5, 20, 44, 89 }, "89 44 36 20 12 5 ")]
         [TestCase(new int[] { 11, 31, 56, 28, 2, 11, 8 }, "56 31 28 11 11 8 2 ")]
