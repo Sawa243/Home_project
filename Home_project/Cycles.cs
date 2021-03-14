@@ -173,6 +173,82 @@ namespace Home_project
             }
             //Console.WriteLine(Midlle);
             return Midlle;
-        }  
+        }
+
+        public static string Cycles_12()
+
+        {
+            int number1 = Convert.ToInt32(Console.ReadLine());
+            int number2 = Convert.ToInt32(Console.ReadLine());
+            int num1_1 = number1 / 100 % 10;
+            int num1_2 = number1 / 10 % 10;
+            int num1_3 = number1 % 10;
+            int num2_1 = number2 / 100 % 10;
+            int num2_2 = number2 / 10 % 10;
+            int num2_3 = number2 % 10;
+            if (num1_1 == num2_1 || num1_1 == num2_2 || num1_1 == num2_3
+
+            || num1_2 == num2_1 || num2_1 == num2_2 || num2_1 == num2_3
+
+            || num1_3 == num2_1 || num1_3 == num2_2 || num1_3 == num2_3)
+            {
+                return "ДА";
+            }
+            else return "нет";
+        }
+
+        public static void Cycles_11(int summaChet, int summaNeChet)
+        {
+            int num = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < num; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    summaNeChet = summaNeChet + i;
+                }
+                if (i % 2 == 0)
+                {
+                    summaChet = summaChet + i;
+                }
+            }
+            if (summaChet > summaNeChet)
+            {
+                for (int i = 0; i < num; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        Console.Write(i + " ");
+                    }
+                }
+            }
+        }
+        public static int Cycles_10(int reversNum)
+        {
+            int num = Convert.ToInt32(Console.ReadLine());
+            while (num != 0)
+            {
+                reversNum = reversNum * 10;
+
+                reversNum = reversNum + num % 10;
+
+                num = num / 10;
+            }
+            return reversNum;
+        }
+        public static int Cycles_9(int summa)
+
+        {
+            int a = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= a; i++)
+            {
+                if (i % 2 == 1)
+
+                {
+                    summa = summa + 1;
+                }
+            }
+            return summa;
+
+        }
     }
 }
